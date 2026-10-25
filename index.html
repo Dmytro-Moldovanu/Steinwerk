@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffdc00">
+  <meta name="description" content="STEINWERK: Große LEGO® Bauideen entdecken, vergleichen und für dein nächstes Bauprojekt vormerken.">
+  <title>STEINWERK — Große LEGO® Projekte planen</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@700;800;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Direkt zum Inhalt</a>
+
+  <div class="concept-strip">
+    <span>Große Bauideen. Klar geplant.</span>
+    <span>Modelle entdecken · Größen vergleichen · Projekt zusammenstellen</span>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href="#start" aria-label="STEINWERK – zur Startseite">
+      <span class="brand-brick" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+      <span>STEINWERK</span>
+    </a>
+
+    <nav aria-label="Hauptnavigation">
+      <a class="active" href="#start" aria-current="location"><span>01</span> Start</a>
+      <a href="#welten"><span>02</span> Welten</a>
+      <a href="#ablauf"><span>03</span> So geht’s</a>
+      <a href="#anfrage"><span>04</span> Anfrage</a>
+    </nav>
+
+    <button class="project-trigger" id="open-project" type="button" aria-haspopup="dialog" aria-controls="project-dialog">
+      Projektliste <span class="plan-count" id="plan-count" aria-label="0 Modelle">0</span>
+    </button>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section id="start" class="page-section hero" aria-labelledby="hero-title">
+      <div class="section-shell">
+        <div class="section-kicker hero-kicker">
+          <span>Für alle, die größer denken</span>
+          <span>Große Ideen aus Steinburg am Lech</span>
+        </div>
+
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">DEIN NÄCHSTES BAUPROJEKT</p>
+            <h1 id="hero-title">KLEINE<br>STEINE.<br><span>GROSSE</span><br>PLÄNE.</h1>
+            <p class="hero-lead">Filmikone, Weltwunder oder eigener Zimmergarten: Entdecke große Sets, vergleiche ihren Platzbedarf und stelle dein Wunschprojekt zusammen.</p>
+            <div class="hero-actions">
+              <a class="button button-dark" href="#welten"><span data-count-for="all">21</span> Modelle entdecken <span aria-hidden="true">↘</span></a>
+              <button class="text-button" type="button" data-open-project aria-haspopup="dialog" aria-controls="project-dialog">Projektliste öffnen <span aria-hidden="true">→</span></button>
+            </div>
+            <dl class="hero-facts" aria-label="Umfang des Katalogs">
+              <div><dt data-count-for="all">21</dt><dd>Modelle im Katalog</dd></div>
+              <div><dt data-collection-count>04</dt><dd>Themenwelten</dd></div>
+              <div><dt>01</dt><dd>dein Großprojekt</dd></div>
+            </dl>
+          </div>
+
+          <div class="hero-art">
+            <div class="hero-card">
+              <div class="hero-card-top"><span>ARCHITEKTUR / 10307</span><span>10.001 TEILE</span></div>
+              <img src="assets/10307.png" alt="Gebautes Modell des LEGO® Eiffelturms" width="283" height="600" fetchpriority="high">
+              <div class="hero-card-caption">
+                <strong>149 cm</strong>
+                <span>Ein Projekt, das<br>den Raum verändert.</span>
+              </div>
+            </div>
+            <div class="stud-cluster studs-blue" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
+            <div class="round-note" aria-hidden="true">DENK<br><strong>GROSS.</strong><span>BAU NOCH GRÖSSER ↗</span></div>
+            <span class="outline-word" aria-hidden="true">BAU WAS.</span>
+          </div>
+        </div>
+
+        <div class="hero-foot">
+          <span>Dein Bauprojekt. Klar geplant.</span>
+          <a href="#welten">Kollektionen ansehen <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <span>STEIN FÜR STEIN</span><b>✦</b><span>FILMWELTEN</span><b>✦</b><span>ARCHITEKTUR</span><b>✦</b><span>BOTANISCHE GÄRTEN</span><b>✦</b><span>TECHNIK &amp; ABENTEUER</span><b>✦</b>
+    </div>
+
+    <section id="welten" class="page-section catalogue-section" aria-labelledby="catalogue-title">
+      <div class="section-shell">
+        <div class="section-kicker">
+          <span>02 / WELTEN ENTDECKEN</span>
+          <span>Vier Welten für große Ideen.</span>
+        </div>
+
+        <div class="section-heading">
+          <h2 id="catalogue-title">WAS WILLST<br>DU GROSS BAUEN?</h2>
+          <p>Entdecke Filmwelten, Architektur, botanische Modelle und Technikprojekte auf einen Blick.</p>
+        </div>
+
+        <div class="world-menu" role="group" aria-label="Kollektion auswählen">
+          <button class="world-card world-film" type="button" data-world-filter="film" aria-pressed="false" aria-label="Filmwelten">
+            <span>01 / STAR WARS, HARRY POTTER &amp; MEHR</span>
+            <strong>FILM-<br>WELTEN</strong>
+            <span><span data-count-for="film">6</span> Modelle ansehen <b aria-hidden="true">↘</b></span>
+            <img src="assets/75192.png" alt="" width="712" height="600" loading="lazy">
+          </button>
+          <button class="world-card world-architecture" type="button" data-world-filter="architecture" aria-pressed="false" aria-label="Architektur">
+            <span>02 / IKONEN &amp; STADTGESCHICHTEN</span>
+            <strong>ARCHI-<br>TEKTUR</strong>
+            <span><span data-count-for="architecture">5</span> Modelle ansehen <b aria-hidden="true">↘</b></span>
+            <img src="assets/10276.png" alt="" width="772" height="600" loading="lazy">
+          </button>
+          <button class="world-card world-garden" type="button" data-world-filter="garden" aria-pressed="false" aria-label="Steingärten">
+            <span>03 / BLÜTEN, STRÄUSSE &amp; ARRANGEMENTS</span>
+            <strong>STEIN-<br>GÄRTEN</strong>
+            <span><span data-count-for="garden">5</span> Modelle ansehen <b aria-hidden="true">↘</b></span>
+            <img src="assets/10345.png" alt="" width="674" height="600" loading="lazy">
+          </button>
+          <button class="world-card world-technic" type="button" data-world-filter="technic" aria-pressed="false" aria-label="Technik und Abenteuer">
+            <span>04 / MASCHINEN, ZÜGE &amp; FAHRTEN</span>
+            <strong>TECHNIK &amp;<br>ABENTEUER</strong>
+            <span><span data-count-for="technic">5</span> Modelle ansehen <b aria-hidden="true">↘</b></span>
+            <img src="assets/42146.png" alt="" width="730" height="600" loading="lazy">
+          </button>
+        </div>
+
+        <div class="catalog-intro">
+          <strong>DER KATALOG</strong>
+          <p>Vergleiche Teilezahl und Platzbedarf und merke deine Favoriten für dein Projekt vor.</p>
+        </div>
+
+        <div class="catalog-toolbar" id="catalog-toolbar">
+          <div class="filters" id="catalog-filters" role="group" aria-label="Katalog nach Kollektion filtern">
+            <button class="selected" type="button" data-filter="all" aria-pressed="true">Alle <span data-count-for="all">21</span></button>
+            <button type="button" data-filter="film" aria-pressed="false">Filmwelten <span data-count-for="film">6</span></button>
+            <button type="button" data-filter="architecture" aria-pressed="false">Architektur <span data-count-for="architecture">5</span></button>
+            <button type="button" data-filter="garden" aria-pressed="false">Gärten <span data-count-for="garden">5</span></button>
+            <button type="button" data-filter="technic" aria-pressed="false">Technik <span data-count-for="technic">5</span></button>
+          </div>
+          <label class="catalog-search">
+            <span class="sr-only">Modelle durchsuchen</span>
+            <input id="catalog-search" type="search" placeholder="Name, Welt oder Setnummer" autocomplete="off">
+            <span aria-hidden="true">⌕</span>
+          </label>
+        </div>
+
+        <p class="catalog-status" id="catalog-status" role="status">21 Modelle werden angezeigt.</p>
+        <div class="catalog-grid" id="catalog-grid"></div>
+        <div class="empty-results" id="empty-results" hidden>
+          <strong>Kein Modell gefunden.</strong>
+          <p>Versuche einen anderen Begriff oder zeige wieder alle Kollektionen.</p>
+          <button type="button" id="reset-catalog">Filter zurücksetzen</button>
+        </div>
+
+        <aside class="feature feature-architecture" aria-labelledby="architecture-feature-title">
+          <div>
+            <span class="feature-label">ARCHITEKTUR / RICHTIG GEPLANT</span>
+            <h3 id="architecture-feature-title">NICHT NUR TEILE ZÄHLEN.</h3>
+            <p>Beim Kolosseum zählt die Fläche, beim Eiffelturm vor allem die Höhe. Behalte deshalb nicht nur die Teilezahl, sondern auch Standfläche und Präsentationsort im Blick.</p>
+            <button class="button button-dark" type="button" data-quick-detail="10276" aria-haspopup="dialog" aria-controls="detail-dialog">Kolosseum ansehen <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="feature-image-canvas"><img src="assets/10276.png" alt="Gebautes Modell des LEGO® Kolosseums" width="772" height="600" loading="lazy"></div>
+          <ol class="space-guide">
+            <li><b>Miss zuerst.</b><span>Breite und Tiefe der Stellfläche notieren.</span></li>
+            <li><b>Plane Zugriff.</b><span>Modelle brauchen Raum zum Drehen, Reinigen und Weiterbauen.</span></li>
+            <li><b>Denke langfristig.</b><span>Große Projekte bleiben oft länger stehen als gedacht.</span></li>
+          </ol>
+        </aside>
+
+        <aside class="feature feature-garden" aria-labelledby="garden-feature-title">
+          <div class="garden-collage" aria-hidden="true">
+            <div><img src="assets/10345.png" alt="" width="674" height="600" loading="lazy"></div>
+            <div><img src="assets/10313.png" alt="" width="800" height="498" loading="lazy"></div>
+          </div>
+          <div>
+            <span class="feature-label">BOTANISCHE GÄRTEN / KOMBINIERBAR</span>
+            <h3 id="garden-feature-title">EIN STRAUSS IST DER ANFANG.</h3>
+            <p>Mehrere Blumen- und Pflanzen-Sets lassen sich zu einem großen, persönlichen Arrangement verbinden. Kombiniere Farben, Höhen und Gefäße ganz nach deinem Stil.</p>
+            <button class="button button-light" type="button" data-bundle="garden">XXL-Garten vormerken <span aria-hidden="true">＋</span></button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="ablauf" class="page-section process-section" aria-labelledby="process-title">
+      <div class="section-shell">
+        <div class="section-kicker">
+          <span>03 / AUS IDEEN WIRD EIN PLAN</span>
+          <span>Von der Idee zum Lieblingsprojekt.</span>
+        </div>
+
+        <div class="section-heading">
+          <h2 id="process-title">NICHT NUR KLICKEN.<br>SINNVOLL PLANEN.</h2>
+          <p>Wähle deine Favoriten, vergleiche ihren Platzbedarf und stelle dein persönliches Bauprojekt zusammen.</p>
+        </div>
+
+        <section class="project-ideas" aria-label="Projektideen">
+          <article class="idea-card idea-film">
+            <span>PROJEKTIDEE 01</span>
+            <h3>Drei Filmwelten.<br>Ein großes Regal.</h3>
+            <div class="idea-images" aria-hidden="true">
+              <img src="assets/75192.png" alt="" width="712" height="600" loading="lazy">
+              <img src="assets/71043.png" alt="" width="597" height="600" loading="lazy">
+              <img src="assets/10316.png" alt="" width="800" height="414" loading="lazy">
+            </div>
+            <p>Millennium Falke, Hogwarts und Bruchtal für ein Regal voller Filmwelten.</p>
+            <button class="button button-dark bundle-button" type="button" data-bundle="film">3 Modelle vormerken <span aria-hidden="true">＋</span></button>
+          </article>
+
+          <article class="idea-card idea-city">
+            <span>PROJEKTIDEE 02</span>
+            <h3>Weltstadt.<br>Stein für Stein.</h3>
+            <div class="idea-images" aria-hidden="true">
+              <img src="assets/10307.png" alt="" width="283" height="600" loading="lazy">
+              <img src="assets/10276.png" alt="" width="772" height="600" loading="lazy">
+              <img src="assets/21061.png" alt="" width="663" height="600" loading="lazy">
+            </div>
+            <p>Eiffelturm, Kolosseum und Notre-Dame: drei Bauwerke, drei ganz unterschiedliche Raumwirkungen.</p>
+            <button class="button button-dark bundle-button" type="button" data-bundle="city">3 Modelle vormerken <span aria-hidden="true">＋</span></button>
+          </article>
+
+          <article class="idea-card idea-garden">
+            <span>PROJEKTIDEE 03</span>
+            <h3>Ein Garten,<br>der nie welkt.</h3>
+            <div class="idea-images" aria-hidden="true">
+              <img src="assets/10345.png" alt="" width="674" height="600" loading="lazy">
+              <img src="assets/10313.png" alt="" width="800" height="498" loading="lazy">
+              <img src="assets/10342.png" alt="" width="800" height="384" loading="lazy">
+            </div>
+            <p>Drei Botanicals-Sets für ein farbenfrohes Arrangement, das ganz dir gehört.</p>
+            <button class="button button-dark bundle-button" type="button" data-bundle="garden">3 Modelle vormerken <span aria-hidden="true">＋</span></button>
+          </article>
+        </section>
+
+        <div class="workflow">
+          <div class="workflow-intro">
+            <span class="feature-label">DER ABLAUF</span>
+            <h3>VOM WOW ZUM<br><em>„HAB ICH GEBAUT.“</em></h3>
+            <p>Vom Lieblingsmodell zur klaren Projektanfrage.</p>
+            <button class="button button-yellow" type="button" data-open-project aria-haspopup="dialog" aria-controls="project-dialog">Projektliste prüfen <span aria-hidden="true">↗</span></button>
+          </div>
+          <ol class="workflow-steps">
+            <li><b>01</b><div><h4>Entdecken</h4><p>Finde die Modelle, die zu deiner Idee passen.</p></div></li>
+            <li><b>02</b><div><h4>Vergleichen</h4><p>Vergleiche Teilezahl, Höhe und Platzbedarf.</p></div></li>
+            <li><b>03</b><div><h4>Projektliste bauen</h4><p>Sammle einzelne Sets oder eine passende Kombination.</p></div></li>
+            <li><b>04</b><div><h4>Anfrage vorbereiten</h4><p>Ergänze Raum, Erfahrung und Zeitrahmen für dein Projekt.</p></div></li>
+          </ol>
+        </div>
+
+        <div class="logic-notes">
+          <article><span>AUSWAHL</span><h3>Dein Wunschset im Blick.</h3><p>Prüfe vor dem Start, ob dein Favorit derzeit verfügbar ist.</p></article>
+          <article><span>BUDGET</span><h3>Realistisch planen.</h3><p>Berücksichtige Setpreis, Zustand und mögliche Beschaffungskosten.</p></article>
+          <article><span>PROJEKTLISTE</span><h3>Deine Auswahl bleibt bei dir.</h3><p>Deine Favoriten sind auf deinem Gerät gespeichert und jederzeit löschbar.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="anfrage" class="page-section contact-section" aria-labelledby="contact-title">
+      <div class="section-shell">
+        <div class="section-kicker">
+          <span>04 / JETZT BIST DU DRAN</span>
+          <span>Jedes große Ding beginnt mit einem Stein.</span>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-copy">
+            <h2 id="contact-title">DEINE IDEE.<br>DEIN RAUM.<br><span>DEIN PLAN.</span></h2>
+            <p>Ob du schon ein Wunschmodell hast oder noch Inspiration suchst: Erzähl uns von deinem Raum und deiner Idee.</p>
+
+            <div class="contact-address">
+              <span class="brand brand-small"><span class="brand-brick" aria-hidden="true"><i></i><i></i><i></i><i></i></span> STEINWERK</span>
+              <address>Bausteinallee 24<br>86400 Steinburg am Lech<br>Deutschland<br>projekt@steinwerk.example</address>
+              <p>Für große Bauideen in Steinburg am Lech</p>
+            </div>
+            <div class="stud-cluster studs-yellow" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </div>
+
+          <form id="project-form" aria-labelledby="project-form-title">
+            <span class="form-kicker">DEINE UNVERBINDLICHE PROJEKTANFRAGE</span>
+            <h3 id="project-form-title">Was möchtest du groß bauen?</h3>
+
+            <div class="form-selection" id="form-selection">
+              <div><strong>Deine Projektliste</strong><span id="form-selection-summary">Noch keine Modelle ausgewählt.</span></div>
+              <button type="button" data-open-project aria-haspopup="dialog" aria-controls="project-dialog">Liste bearbeiten</button>
+            </div>
+
+            <div class="input-row">
+              <label>Dein Name<input name="name" type="text" placeholder="Max Mustermann" autocomplete="name" maxlength="100" required></label>
+              <label>Deine E-Mail<input name="email" type="email" placeholder="max@beispiel.de" autocomplete="email" maxlength="200" required></label>
+            </div>
+
+            <div class="input-row">
+              <label>Wobei brauchst du Hilfe?
+                <select name="purpose">
+                  <option>Set-Auswahl zusammenstellen</option>
+                  <option>Platz und Präsentation planen</option>
+                  <option>Verfügbarkeit und Beschaffung prüfen</option>
+                  <option>Geschenkprojekt vorbereiten</option>
+                  <option>Eigene Großidee besprechen</option>
+                </select>
+              </label>
+              <label>Deine Bauerfahrung
+                <select name="experience">
+                  <option>Mein erstes Großprojekt</option>
+                  <option>Schon einige große Sets gebaut</option>
+                  <option>Sehr erfahren</option>
+                  <option>Wir bauen als Gruppe</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="input-row">
+              <label>Verfügbare Stellbreite<input name="space" type="text" placeholder="z. B. 120 cm oder noch offen" maxlength="80"></label>
+              <label>Gewünschter Zeitrahmen
+                <select name="timing">
+                  <option>Noch offen</option>
+                  <option>Ein Wochenende</option>
+                  <option>2–4 Wochen</option>
+                  <option>Langzeitprojekt</option>
+                  <option>Geschenktermin geplant</option>
+                </select>
+              </label>
+            </div>
+
+            <label>Deine Idee
+              <textarea name="message" rows="5" maxlength="2000" required placeholder="Wo soll das Modell stehen, wer baut mit und was ist dir besonders wichtig?"></textarea>
+            </label>
+
+            <button class="button button-dark submit-button" type="submit" data-js-submit disabled>Anfrage vorbereiten <span aria-hidden="true">↗</span></button>
+            <p class="form-note">Deine Angaben werden für dich in einer übersichtlichen Anfrage zusammengefasst.</p>
+            <div id="form-result" role="status" hidden></div>
+          </form>
+        </div>
+
+        <section class="faq" aria-labelledby="faq-title">
+          <div><span class="feature-label">NOCH FRAGEN?</span><h3 id="faq-title">KURZ GEKLÄRT.</h3></div>
+          <div>
+            <details>
+              <summary>Wie läuft die Anfrage ab?</summary>
+              <p>Stelle dein Projekt zusammen, ergänze deine Wünsche und erhalte eine Übersicht zum Kopieren und Weiterverwenden.</p>
+            </details>
+            <details>
+              <summary>Warum fehlen Preise?</summary>
+              <p>Der passende Preis hängt von Set, Zustand und aktueller Verfügbarkeit ab.</p>
+            </details>
+            <details>
+              <summary>Was passiert mit meiner Projektliste?</summary>
+              <p>Deine Auswahl bleibt auf diesem Gerät gespeichert und kann jederzeit über die Projektliste gelöscht werden.</p>
+            </details>
+            <details>
+              <summary>Kann ich Botanicals-Sets miteinander kombinieren?</summary>
+              <p>Ja. Blumen, Sträuße und Pflanzen lassen sich farblich und räumlich zu einem großen Arrangement verbinden. Vase und Gefäß wählst du passend dazu aus.</p>
+            </details>
+          </div>
+        </section>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="section-shell footer-content">
+      <div>
+        <a class="brand brand-footer" href="#start">STEINWERK</a>
+        <p>Groß gedacht. Stein für Stein.</p>
+      </div>
+      <div class="footer-disclaimer" role="note" aria-label="Hinweis zum Portfolio- und Demonstrationsprojekt">
+        <strong>Privates Portfolio- und Demonstrationsprojekt</strong>
+        <p>STEINWERK ist eine fiktive, nichtkommerzielle Beispielwebsite, die ausschließlich dazu dient, meine Arbeit im Bereich Webentwicklung und Webdesign zu präsentieren. Es handelt sich um keinen Online-Shop und um kein echtes Unternehmen. Hier werden keine Produkte oder Dienstleistungen angeboten, gekauft oder verkauft. Bestellungen und Zahlungen sind nicht möglich.</p>
+        <p>Projektliste und Anfrageformular dienen nur der Demonstration der Website-Funktionen; es werden keine Anfragen versendet oder Verträge abgeschlossen. Die dargestellte Anschrift und die Kontaktadresse sind frei erfunden.</p>
+        <p>LEGO® ist eine Marke der LEGO Gruppe. Diese unabhängige Website wird von der LEGO Gruppe weder gesponsert noch genehmigt oder unterstützt. Marken, Produktbezeichnungen und Abbildungen gehören ihren jeweiligen Rechteinhabern. Angaben zu den verwendeten Bildern findest du unter „Bildquellen“.</p>
+      </div>
+      <div class="footer-actions">
+        <button type="button" data-info="project" aria-haspopup="dialog" aria-controls="info-dialog">Über STEINWERK</button>
+        <button type="button" data-info="sources" aria-haspopup="dialog" aria-controls="info-dialog">Bildquellen</button>
+        <button type="button" data-info="privacy" aria-haspopup="dialog" aria-controls="info-dialog">Datenschutz</button>
+        <a href="#start" aria-label="Zurück nach oben">↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="compare-bar" id="compare-bar" hidden>
+    <span><strong id="compare-count">0</strong> von <span data-max-compare>3</span> Modellen gewählt</span>
+    <button type="button" id="compare-open" disabled aria-haspopup="dialog" aria-controls="compare-dialog">Vergleichen</button>
+    <button type="button" id="compare-clear">Leeren</button>
+  </div>
+
+  <div class="toast" id="toast" role="status" hidden></div>
+
+  <dialog id="detail-dialog" aria-labelledby="detail-title">
+    <button class="dialog-close" type="button" aria-label="Dialog schließen">×</button>
+    <div id="detail-content"></div>
+  </dialog>
+
+  <dialog id="compare-dialog" aria-labelledby="compare-title">
+    <button class="dialog-close" type="button" aria-label="Dialog schließen">×</button>
+    <div id="compare-content"></div>
+  </dialog>
+
+  <dialog id="project-dialog" aria-labelledby="project-title">
+    <button class="dialog-close" type="button" aria-label="Dialog schließen">×</button>
+    <div id="project-content"></div>
+  </dialog>
+
+  <dialog id="info-dialog" aria-labelledby="info-title">
+    <button class="dialog-close" type="button" aria-label="Dialog schließen">×</button>
+    <div id="info-content"></div>
+  </dialog>
+
+  <noscript><p class="noscript">Die interaktiven Funktionen sind momentan nicht verfügbar. Die Inhalte kannst du weiterhin ansehen.</p></noscript>
+</body>
+</html>
